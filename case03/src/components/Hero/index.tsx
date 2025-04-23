@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="bg-zinc-100 py-20">
       <div className="container mx-auto flex items-center px-4 gap-10">
-        <div className="w-1/2 h-96 relative">
+        <div className="w-full lg:w-1/2 h-96 relative">
           <Image
             fill
             src="/coffee-brew.webp"
