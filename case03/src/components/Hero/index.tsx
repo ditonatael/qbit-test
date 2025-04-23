@@ -18,7 +18,7 @@ export default function Hero() {
               Crafting Perfect Coffee Since 1997
             </h2>
             <span className="text-white text-base font-light">
-              Rasa otentik dari tanah Indonesia yang kaya akan tradisi
+              The authentic taste of Indonesia’s land, rich in tradition.
             </span>
             <Button className="w-48 h-10 mt-6 font-semibold text-sm text-black bg-white rounded-full">
               Discover Our Story
@@ -30,7 +30,7 @@ export default function Hero() {
             Crafting Perfect Coffee Since 1997
           </h2>
           <span className="text-lg font-light">
-            Rasa otentik dari tanah Indonesia yang kaya akan tradisi
+            The authentic taste of Indonesia’s land, rich in tradition.
           </span>
           <Button className="w-56 h-12 mt-8 font-semibold">
             Explore Our Coffee
