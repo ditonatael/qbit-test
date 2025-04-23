@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="bg-zinc-100 py-20">
       <div className="container mx-auto flex items-center px-4 gap-10">
-        <div className="w-full lg:w-2/3 h-96 relative">
+        <div className="w-1/2 h-96 relative">
           <Image
             fill
             src="/coffee-brew.webp"
@@ -25,7 +25,7 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-        <div className="hidden lg:flex flex-col w-full">
+        <div className="hidden lg:flex flex-col w-1/2">
           <h2 className="text-5xl xl:text-6xl font-bold mb-2">
             Crafting Perfect Coffee Since 1997
           </h2>
