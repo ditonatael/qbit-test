@@ -7,9 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <ChooseUs />
-      <div className="hidden lg:block">
-        <OurStory />
-      </div>
+      <OurStory />
     </>
   );
 }

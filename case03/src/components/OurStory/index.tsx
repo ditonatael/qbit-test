@@ -4,14 +4,14 @@ import { FaCheck } from "react-icons/fa6";
 export default function OurStory() {
   return (
     <div className="bg-zinc-100 py-20">
-      <div className="container mx-auto px-4 flex items-center">
-        <div className="w-1/2 flex flex-col gap-4">
-          <h2 className="text-3xl font-semibold mb-4">Our Story</h2>
-          <div className="flex flex-col gap-0.5 pr-12">
-            <span className="text-semibold underline">
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-2">Our Story</h2>
+          <div className="flex flex-col gap-2 lg:pr-12">
+            <span className="font-semibold underline text-base md:text-lg">
               Fresh, natural, and full of stories.
             </span>
-            <span className="text-justify text-zinc-900">
+            <span className="text-justify text-zinc-900 text-sm md:text-base leading-relaxed">
               From the cool mountain mists to the comforting aroma in your cup,
               each sip of our coffee tells a story that stirs not just your
               senses—but your soul. Founded in 1997 in a humble village rooted
@@ -19,10 +19,10 @@ export default function OurStory() {
               preserve the heart of local coffee culture.
             </span>
           </div>
-          <span className="flex gap-4 text-sm font-bold">
+          <span className="flex flex-col sm:flex-row gap-2 text-sm font-bold">
             <span className="flex gap-1 items-center">
               <FaCheck />
-              100% Arabic Beans
+              100% Arabica Beans
             </span>
             <span className="flex gap-1 items-center">
               <FaCheck />
@@ -30,7 +30,7 @@ export default function OurStory() {
             </span>
           </span>
         </div>
-        <div className="w-1/2 h-96 relative">
+        <div className="w-full lg:w-1/2 h-64 sm:h-80 lg:h-96 relative">
           <Image
             fill
             src="/coffee-shop.webp"
