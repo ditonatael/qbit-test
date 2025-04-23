@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -20,9 +21,11 @@ export default function Hero() {
             <span className="text-white text-base font-light">
               The authentic taste of Indonesia’s land, rich in tradition.
             </span>
-            <Button className="w-48 h-10 mt-6 font-semibold text-sm text-black bg-white rounded-full">
-              Discover Our Story
-            </Button>
+            <Link href={"/about"}>
+              <Button className="w-48 h-10 mt-6 font-semibold text-sm text-black bg-white rounded-full">
+                Discover Our Story
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="hidden lg:flex flex-col w-1/2">
@@ -32,9 +35,11 @@ export default function Hero() {
           <span className="text-lg font-light">
             The authentic taste of Indonesia’s land, rich in tradition.
           </span>
-          <Button className="w-56 h-12 mt-8 font-semibold">
-            Explore Our Coffee
-          </Button>
+          <Link href={"/products"}>
+            <Button className="w-56 h-12 mt-8 font-semibold">
+              Explore Our Coffee
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

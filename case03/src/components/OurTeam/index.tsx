@@ -1,17 +1,34 @@
+"use client";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Loading from "../Loading";
+
 export default function OurTeam() {
-  const leaderShipTeam = [
-    { name: "Sarah Johnson", position: "CEO" },
-    { name: "Michael Chen", position: "COO" },
-    { name: "David Miller", position: "Head Roaster" },
-    { name: "Emma Rodriguez", position: "Quality Director" },
-  ];
-  return (
+  const [teams, setTeams] = useState<null | any[]>(null);
+  const [loading, setLoading] = useState(true);
+
+  const handleGetTeams = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/team");
+      setTeams(res.data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    handleGetTeams();
+  }, []);
+  return loading ? (
+    <Loading />
+  ) : (
     <div className="container mx-auto py-20 px-4 flex flex-col items-center gap-4">
       <div className="flex text-center">
         <h2 className="text-3xl font-semibold">Our Leadership Team</h2>
       </div>
       <div className="mt-10 flex flex-wrap justify-center gap-4 xl:flex-row lg:justify-between">
-        {leaderShipTeam.map((item, i) => {
+        {teams?.map((item, i) => {
           return (
             <div
               key={i}
