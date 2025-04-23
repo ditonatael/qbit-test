@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Kopi Arabika Gayo",
+      "description": "Premium coffee from the Gayo highlands, with floral aroma and tropical fruit notes.",
+      "price": 85000,
+      "image": "/images/arabika-gayo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kopi Robusta Lampung",
+      "description": "Strong flavor with chocolate hints and a signature smoky robusta aftertaste.",
+      "price": 70000,
+      "image": "/images/robusta-lampung.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Kopi House Blend Kampung",
+      "description": "A fine blend of arabica and robusta with a medium roast process.",
+      "price": 78000,
+      "image": "/images/house-blend.jpg"
+    }
+  ]
+}
