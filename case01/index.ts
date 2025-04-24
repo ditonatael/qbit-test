@@ -14,7 +14,7 @@ const fruits: IFruit[] = [
     },
     {
         fruitId: 2,
-        fruitName: 'Kurma',
+        fruitName: 'KURMA',
         fruitType: 'IMPORT',
         stock: 20
     },
@@ -32,7 +32,7 @@ const fruits: IFruit[] = [
     },
     {
         fruitId: 5,
-        fruitName: 'Jeruk Bali',
+        fruitName: 'JERUK BALI',
         fruitType: 'LOCAL',
         stock: 10
     },
@@ -50,20 +50,25 @@ const fruits: IFruit[] = [
     }
 ]
 
+const handleFormatFruit = (fruitName: string) => {
+    return fruitName.split(' ').map((item) => { return item.charAt(0).toUpperCase().concat(item.slice(1).toLowerCase()) }).join(' ')
+}
+
 // SOAL NOMOR 1
 const getDistinctFruitName = (fruits: IFruit[]) => {
     const fruitNameList: string[] = []
     for (let i = 0; i < fruits.length; i++) {
         let duplicate = false
         for (let j = 0; j < fruitNameList.length; j++) {
-            if (fruits[i].fruitName.toLowerCase() === fruitNameList[j].toLowerCase()) {
+            if (fruits[i].fruitName.toLowerCase() === fruitNameList[j].toLowerCase().trim()) {
                 duplicate = true
                 break
             }
         }
 
         if (!duplicate) {
-            fruitNameList.push(fruits[i].fruitName)
+            const formattedFruitName = handleFormatFruit(fruits[i].fruitName)
+            fruitNameList.push(formattedFruitName)
         }
     }
     return fruitNameList
@@ -94,7 +99,7 @@ const getFruitsByType = (fruits: IFruit[]) => {
         }
 
         if (!duplicate) {
-            wadah[fruit.fruitType].push(` ${fruit.fruitName}`)
+            wadah[fruit.fruitType].push(` ${handleFormatFruit(fruit.fruitName)}`)
 
         }
     }
